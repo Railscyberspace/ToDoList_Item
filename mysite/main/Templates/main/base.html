@@ -3,10 +3,16 @@
     <head>
         <title>
          Sunday Sites   
+         <link rel="stylesheet" href="main.css">
         </title>
         </head>
 <body>
-    <div id = 'content', name = 'content'>
+    <div class = "sidenav">
+        <a href = "home.html">Home</a>
+        <a href =   "create.html">Create</a> 
+        <a href =  "List.html">ToDoList</a>
+     </div>
+    <div id = "content", name = "content" class = "main">
     {% block content %}
     {% endblock %} 
     </div>
