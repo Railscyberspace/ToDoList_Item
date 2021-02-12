@@ -5,16 +5,23 @@
   {% block content %}
    <h2>{{ls.name}}</h2>
    <form method="post" action="#">
-      {% csrf_token%}
-   <ul>
-       {% for item in ls.item_set.all %}
-          {% if item.complete == True %}
-     <li><input type = "checkbox" value="Click" name = "c{{item.id}}"checked >{{item.text}}</li>
+      {% csrf_token %}
+   
+         {% for item in ls.item_set.all %}
+         <div class = "input-group mb-3">
+            <div class = "input-group-prepend">
+           
+            {% if item.complete == True %}
+              <input type = "checkbox" value="Click" name = "c{{item.id}}" checked >
      {% else %}
-   <li><input type = "checkbox" value="Click" name = "c{{item.id}}">{{item.text}}</li>
+   </div>
+   <input type ="text" value = "{{item.text}}" class = "form-control">
    {% endif %}
+</div>
+   <input type = "checkbox" value="Click" name = "c{{item.id}}">
+</div>
    {% endfor %}
-   </ul>
+   
    <button type = "submit" name = "save" value = "save">Save
    </button>
    <input type = "text" name = "new">
