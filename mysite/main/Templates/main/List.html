@@ -5,27 +5,31 @@
   {% block content %}
    <h2>{{ls.name}}</h2>
    <form method="post" action="#">
+      <div class = "row-justify-content-center"></div>
       {% csrf_token %}
    
          {% for item in ls.item_set.all %}
          <div class = "input-group mb-3">
             <div class = "input-group-prepend">
-           
-            {% if item.complete == True %}
-              <input type = "checkbox" value="Click" name = "c{{item.id}}" checked >
-     {% else %}
+               <div class = "input-group-text">
+                {% if item.complete == True %}
+                  <input type = "checkbox" value="Click" name = "c{{item.id}}" checked >
+              {% else %}
    </div>
-   <input type ="text" value = "{{item.text}}" class = "form-control">
-   {% endif %}
-</div>
-   <input type = "checkbox" value="Click" name = "c{{item.id}}">
-</div>
+            <input type ="text" value = "{{item.text}}">
+       {% endif %}
+      </div>
+   </div>
+         <input type = "text" value="Click" name = "c{{item.id}}" class = "form-control">
+    </div>
    {% endfor %}
-   
-   <button type = "submit" name = "save" value = "save">Save
-   </button>
-   <input type = "text" name = "new">
-   <button type = "submit" name = "newItem" value = "newIem">Add Item</button>
+   <div class = "input-group mb-3">
+      <div class = "input-group-prepend">    
+            <button type = "submit", name = "newItem", value = "newIem" class = "btn btn-success">Add Item</button>
+         </div>
+         <input type = "text" name = "new">
+      </div>
+   <button type = "submit", name = "save", value = "save" class = "btn btn-success">Save</button><br/>
    </form>
 {% endblock %}  
    
