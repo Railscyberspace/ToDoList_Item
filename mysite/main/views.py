@@ -23,7 +23,7 @@ def index(response, id):
         if len(txt) > 2:  
             ls.item_set.create(text = txt, complete = False) 
         else: 
-            print("Invalid Text")
+            print('Invalid Text')
              
     return render(response, 'main/List.html',{'ls':ls})
 
