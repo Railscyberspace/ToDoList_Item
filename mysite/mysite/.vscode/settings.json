@@ -1,0 +1,8 @@
+{
+    "django.snippets.exclude": [
+
+        "cms",
+        "wagtail"
+    ],
+"python.autoComplete.extraPaths":["./C:/Users/Sunday Abam jnr/Desktop/ToDoList Project/ToDoList_Item/mysite/mysite/urls.py"]
+}
