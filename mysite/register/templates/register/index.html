@@ -1,9 +1,10 @@
-{% extends "main/base.html" %}
+{% extends "./../main/base.html" %}
 
 {% block title %} Create an Account {% endblock %}
 
 {% block content %}
 <form method="POST" class = "from-group">
+    {% csrf_token %}
 {{form}}
 <button type = "submit" class = "btn btn-success">Register</button>
 
