@@ -7,10 +7,14 @@ from django.contrib.auth.models import User
 
 class RegisterForm(UserCreationForm):  
     Email = forms.EmailField()
+    Number = forms.NumberInput()
+    
     
 class Meta: 
-    model = User
-    field = ["Username","Email", "password1", "password2"]
+        model = User
+        field = ["Username","Email", "Phone", "password1", "password2"]
+        
+    
     
     
     

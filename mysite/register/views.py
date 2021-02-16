@@ -1,12 +1,12 @@
 from django.shortcuts import render,redirect  
-from  .forms import  RegisterForm
+from .forms import  RegisterForm
 # Create your views here.
-def index(response):  
-    if response.method == "POST": 
-        form = RegisterForm(response.POST)
+def index(request):  
+    if request.method == "POST": 
+        form = RegisterForm(request.POST)
         if form.is_valid(): 
             form.save()
         return redirect("/home")
     else: 
         form = RegisterForm()
-    return render(response, 'register/index.html', {'form':form})
+    return render(request, 'register/index.html', {'form':form})

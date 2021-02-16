@@ -4,5 +4,13 @@
         "cms",
         "wagtail"
     ],
-"python.autoComplete.extraPaths":["./C:/Users/Sunday Abam jnr/Desktop/ToDoList Project/ToDoList_Item/mysite/mysite/urls.py"]
+"python.autoComplete.extraPaths":["./C:/Users/Sunday Abam jnr/Desktop/ToDoList Project/ToDoList_Item/mysite/mysite/urls.py"],
+
+
+"python.linting.pylintArgs": [
+    "--load-plugins",
+    "pylint_django",
+    "--load-plugins pylint_django",
+    "--errors-only"
+    ]
 }
