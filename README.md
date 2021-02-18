@@ -31,6 +31,16 @@
         #python manage.py runserver
 
         #You’ll see the following output on the command line:
+        
+    Run this command to add migrations to the database
+    make sure you are in the project folder mysite before runing the command.
+    run: python manage.py makemaigrations
+    You should see this 
+    Migrations for 'main':
+  main\migrations\0001_initial.py
+    - Create model ToDoList
+    - Create model Item
+    then run python manage.py migrate.
 
         #Performing system checks...
 
