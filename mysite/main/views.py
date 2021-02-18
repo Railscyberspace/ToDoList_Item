@@ -35,9 +35,9 @@ def create(response):
         form = CreateNewList(response.POST)
         if form.is_valid():  
             n = form.cleaned_data['lastname']
-            t = ToDoList(lastname = n)
-            t.save()
-        return HttpResponseRedirect('/%i' %t.id)
+            response.user.todolist_set.create(name = n)
+          
+        return HttpResponseRedirect('/%i' %ToDoList.id)
     else:  
         form = CreateNewList()
     return render (response, 'main/create.html',{'form':form})
