@@ -31,6 +31,16 @@
         #python manage.py runserver
 
         #You’ll see the following output on the command line:
+        
+    Run this command to add migrations to the database
+    make sure you are in the project folder mysite before runing the command.
+    run: python manage.py makemaigrations
+    You should see this 
+    Migrations for 'main':
+  main\migrations\0001_initial.py
+    - Create model ToDoList
+    - Create model Item
+    then run python manage.py migrate.
 
         #Performing system checks...
 
@@ -78,3 +88,37 @@ python manage.py createsuperuser
 1.on the browser paste the the local address/admin
 
 #follow steps by creating a password
+
+#next is to create make migrations to the database.
+#Run this cammand.
+$ python manage.py makemigrations
+Migrations for 'main':
+  main\migrations\0001_initial.py
+    - Create model ToDoList
+    - Create model Item
+#Run this command next.
+python manage.py migrate
+
+#You will see the following.
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, main, sessions
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying auth.0012_alter_user_first_name_max_length... OK
+  Applying main.0001_initial... OK
+  Applying sessions.0001_initial... OK
