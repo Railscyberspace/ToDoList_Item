@@ -91,7 +91,13 @@ python manage.py createsuperuser
 
 #next is to create make migrations to the database.
 #Run this cammand.
-$ python manage.py migrate
+$ python manage.py makemigrations
+Migrations for 'main':
+  main\migrations\0001_initial.py
+    - Create model ToDoList
+    - Create model Item
+#Run this command next.
+python manage.py migrate
 
 #You will see the following.
 Operations to perform:
